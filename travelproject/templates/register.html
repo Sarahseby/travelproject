@@ -1,0 +1,78 @@
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <style type="text/css">
+        form{
+          width:400px;
+}
+        form{
+        height:350px;
+        }
+        form{
+        display:inline-block;
+        }
+        form{
+        padding:20px;
+        }
+        form{
+        box-shadow:0px 5px 20px 10px rgba(0,0,0,0,2);
+}
+        body{
+        background-image:url('top.jpg');
+        }
+        input[type="text"]{
+        height:21px
+        }
+    </style>
+</head>
+
+<body style="text-align:center"; bgcolor="white">
+<div class="wrapper">
+    <div class="form">
+<h2> Travello Register</h2>
+
+        <form action="register" method="post" style="background-color:lightskyblue">
+            <h2>REGISTRATION</h2>
+             {% csrf_token %}
+            <div class="field fname">
+                <div class="input-area">
+                     <input type="text"name="username" placeholder="username"><br>
+                </div>
+            </div><br>
+            <div class="field fname">
+                <div class="input-area">
+                      <input type="text"name="first_name" placeholder="Enter your first name"><br>
+                </div>
+            </div><br>
+             <div class="field fname">
+                <div class="input-area">
+                     <input type="text"name="last_name" placeholder="Enter your second name"><br>
+                </div>
+            </div><br>
+             <div class="field fname">
+                <div class="input-area">
+                       <input type="email"name="email" placeholder="Enter email id"><br>
+                </div>
+            </div><br>
+             <div class="field fname">
+                <div class="input-area">
+                      <input type="password"name="password" placeholder="enter your password"><br>
+                </div>
+            </div><br>
+             <div class="field fname">
+                <div class="input-area">
+                       <input type="password"name="password1" placeholder="confirm your password"><br>
+                </div>
+            </div><br>
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+     <style type="text/css">
+        form{
+          width:400px;
+}
+        form{
+        height:200px;
+        }
+        form{
+        display:inline-block;
+        }
+        form{
+        padding:20px;
+        }
+        body{
+        background-image:url('top.jpg');
+        }
+        input[type="text"]{
+        height:21px
+         }
+         input[type="password"]{
+        height:21px
+         }
+         input[type="text"]{
+        width:350px
+         }
+         input[type="password"]{
+        width:350px
+         }
+           input[type="submit"]{
+        height:21px
+         }
+    </style>
+</head>
+<body style="text-align:center;" bgcolor="white">
+<h1 style="text-align:center">Login Here</h1>
+<form action="login" method="post" style="background-color:lightskyblue">
+    <h2>LOGIN</h2>
+    {% csrf_token %}
+    <div class="field fname">
+                <div class="input-area">
+                     <input type="text"name="username" placeholder="username">
+                </div>
+            </div><br>
+
+    <div class="field fname">
+                <div class="input-area">
+                      <input type="password"name="password" placeholder="enter your password"><br>
+                </div>
+            </div><br>
+    <input type="submit">
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
